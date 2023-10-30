@@ -1,9 +1,6 @@
 import sys
-
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QApplication, QWidget, QLabel, QSlider, QLineEdit, QVBoxLayout
-
-
 class Conversor(QWidget):
     def __init__(self):
         super().__init__()

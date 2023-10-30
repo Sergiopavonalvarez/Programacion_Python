@@ -7,11 +7,8 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QLineE
 class Intercambio(QMainWindow):
     def __init__(self):
         super().__init__()
-        # Propiedades Ventana
         self.setWindowTitle("Ejercicio")
         self.setGeometry(1000, 250, 400, 200)
-
-        # Layout Vertical
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()

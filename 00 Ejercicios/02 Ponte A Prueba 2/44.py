@@ -5,24 +5,18 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QVBoxL
 class Porcentaje(QMainWindow):
     def __init__(self):
         super().__init__()
-        # Características
         self.setWindowTitle("Ejercicio 04")
         self.setGeometry(1000, 250, 400, 200)
-        # Crear Widget central con LayoutVertical
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()
-
-        # QComboBox para el número de niños
         self.combo_ninos = QComboBox()
         lista = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        self.combo_ninos.addItems(lista)  # Usar addItems para agregar múltiples elementos
+        self.combo_ninos.addItems(lista)
         layout.addWidget(QLabel("Numero de niños"))
         layout.addWidget(self.combo_ninos)
-
-        # QComboBox para el número de niñas
         self.combo_ninas = QComboBox()
-        self.combo_ninas.addItems(lista)  # Usar addItems para agregar múltiples elementos
+        self.combo_ninas.addItems(lista)
         layout.addWidget(QLabel("Numero de niñas"))
         layout.addWidget(self.combo_ninas)
 

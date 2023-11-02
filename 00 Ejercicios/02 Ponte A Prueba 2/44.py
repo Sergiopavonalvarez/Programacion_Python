@@ -1,5 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QVBoxLayout, QPushButton, QComboBox, QFrame
+
+
 class Porcentaje(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -24,12 +26,15 @@ class Porcentaje(QMainWindow):
         self.etiqueta1 = QLabel("", self)
         layout.addWidget(self.etiqueta1)
         central_widget.setLayout(layout)
+
     def calcular_porcentaje(self):
         ninos = int(self.combo_ninos.currentText())
         ninas = int(self.combo_ninas.currentText())
         resultado = f"Porcentaje de niños: {ninos / (ninos + ninas) * 100:.2f}%"
         resultado += f"\nPorcentaje de niñas: {ninas / (ninos + ninas) * 100:.2f}%"
         self.etiqueta1.setText(resultado)
+
+
 if __name__ == "__main__":
     app = QApplication([])
     ventana1 = Porcentaje()

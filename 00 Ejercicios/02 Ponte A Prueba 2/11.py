@@ -1,4 +1,3 @@
-from msilib.schema import Icon
 from PySide6.QtWidgets import QApplication, QLabel, QWidget
 
 
@@ -7,6 +6,7 @@ class Ventana(QWidget):
         super().__init__()
         self.setWindowTitle("Ventana")
         self.etiqueta1 = QLabel("Hola mundo!", self)
+
 
 if __name__ == "__main__":
     app = QApplication([])

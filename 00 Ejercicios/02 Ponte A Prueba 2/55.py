@@ -1,6 +1,8 @@
 import sys
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QApplication, QWidget, QLabel, QSlider, QLineEdit, QVBoxLayout
+
+
 class Conversor(QWidget):
     def __init__(self):
         super().__init__()
@@ -20,11 +22,14 @@ class Conversor(QWidget):
         layout.addWidget(self.pesetas_label)
         layout.addWidget(self.pesetas_line_edit)
         self.setLayout(layout)
+
     def actualizar_pesetas(self):
         euros = self.euros_slider.value()
         pesetas = euros * 166
         self.pesetas_line_edit.setText(str(pesetas))
         self.euros_label.setText(str(self.euros_slider.value()))
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     conv = Conversor()

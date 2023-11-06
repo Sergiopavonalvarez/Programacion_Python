@@ -1,8 +1,9 @@
 import sys
 
 from PySide6 import QtGui
-#from typing import Optional
+# from typing import Optional
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton
+
 
 class Intercambio(QMainWindow):
     def __init__(self):
@@ -22,10 +23,12 @@ class Intercambio(QMainWindow):
         layout.addWidget(self.Calculo_Boton)
         self.Calculo_Boton.clicked.connect(self.intercambio_variables)
         central_widget.setLayout(layout)
+
     def intercambio_variables(self):
         valor_a = int(self.input_a.text())
-        valor_b=(valor_a*1000)/6
+        valor_b = (valor_a * 1000) / 6
         print(valor_b)
+
 
 if __name__ == "__main__":
     app = QApplication([])

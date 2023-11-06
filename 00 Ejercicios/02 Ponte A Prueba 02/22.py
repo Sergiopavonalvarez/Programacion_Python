@@ -1,6 +1,7 @@
 import sys
-#from typing import Optional
+# from typing import Optional
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton
+
 
 class Intercambio(QMainWindow):
     def __init__(self):
@@ -28,6 +29,7 @@ class Intercambio(QMainWindow):
         valor_b = self.input_b.text()
         self.input_a.setText(valor_b)
         self.input_b.setText(valor_a)
+
 
 if __name__ == "__main__":
     app = QApplication([])

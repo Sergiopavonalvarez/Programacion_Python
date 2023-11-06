@@ -1,8 +1,9 @@
 import sys
 
 from PySide6 import QtGui
-#from typing import Optional
+# from typing import Optional
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton
+
 
 class Intercambio(QMainWindow):
     def __init__(self):
@@ -41,26 +42,32 @@ class Intercambio(QMainWindow):
         layout.addWidget(self.Calculo_div)
         self.Calculo_div.clicked.connect(self.divi)
         central_widget.setLayout(layout)
+
     def sumar(self):
         valor_a = int(self.input_a.text())
         valor_b = int(self.input_b.text())
         valor_suma = valor_a + valor_b
         self.etiqueta1.setText((str)(valor_suma))
+
     def restar(self):
         valor_a = int(self.input_a.text())
         valor_b = int(self.input_b.text())
         valor_suma = valor_a - valor_b
         self.etiqueta1.setText((str)(valor_suma))
+
     def divi(self):
         valor_a = int(self.input_a.text())
         valor_b = int(self.input_b.text())
         valor_suma = valor_a / valor_b
         self.etiqueta1.setText((str)(valor_suma))
+
     def multi(self):
         valor_a = int(self.input_a.text())
         valor_b = int(self.input_b.text())
         valor_suma = valor_a * valor_b
         self.etiqueta1.setText((str)(valor_suma))
+
+
 if __name__ == "__main__":
     app = QApplication([])
     ventana1 = Intercambio()

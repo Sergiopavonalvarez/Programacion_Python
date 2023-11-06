@@ -14,8 +14,8 @@ class App(QMainWindow):
         self.setCentralWidget(self.textEdit)
 
         # Define the actions
-        self.openAction = QAction(QIcon("/00 Ejercicios/11 Guardar archivos//abrir.png"), "Abrir", self, shortcut="Ctrl+O")
-        self.saveAction = QAction(QIcon("/00 Ejercicios/11 Guardar archivos//descarga.png"), "Guardar", self, shortcut="Ctrl+S")
+        self.openAction = QAction(QIcon("/00 Ejercicios/12 Guardar archivos//abrir.png"), "Abrir", self, shortcut="Ctrl+O")
+        self.saveAction = QAction(QIcon("/00 Ejercicios/12 Guardar archivos//descarga.png"), "Guardar", self, shortcut="Ctrl+S")
 
 
         # Connect the actions to slots

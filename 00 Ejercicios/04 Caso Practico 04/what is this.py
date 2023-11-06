@@ -15,12 +15,15 @@ class VentanaPrincipal(QMainWindow):
 
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono1 = os.path.join(os.path.dirname(__file__),"C://Users//pavon//documents//PyCharm//Programacion_Python//00 Ejercicios//04 Ponte A Prueba 04//ayuda.png")
-        ruta_a_icono2 = os.path.join(os.path.dirname(__file__),"C://Users//pavon//documents//PyCharm//Programacion_Python//00 Ejercicios//04 Ponte A Prueba 04//imprimir.png")
+        ruta_a_icono1 = os.path.join(os.path.dirname(__file__),
+                                     "/00 Ejercicios/04 Caso Practico 04//ayuda.png")
+        ruta_a_icono2 = os.path.join(os.path.dirname(__file__),
+                                     "/00 Ejercicios/04 Caso Practico 04//imprimir.png")
         accion = QAction(QIcon(ruta_a_icono2), "Imprimir por consola", self)
         accion2 = QAction(QIcon(ruta_a_icono1), "Que es esto?", self)
 
-        accion.setWhatsThis("“Al ejecutar esta acción, se añadirá el texto “Acción pulsada” en el dock. Se puede lanzar por Menú > Imprimir en dock, con Ctrl+p, o haciendo clic en el botón correspondiente de la barra de herramientas")
+        accion.setWhatsThis(
+            "“Al ejecutar esta acción, se añadirá el texto “Acción pulsada” en el dock. Se puede lanzar por Menú > Imprimir en dock, con Ctrl+p, o haciendo clic en el botón correspondiente de la barra de herramientas")
         accion.setStatusTip("Modo de ayuda")
 
         accion.setShortcut(QKeySequence())
@@ -34,25 +37,19 @@ class VentanaPrincipal(QMainWindow):
         barra_herramientas.addAction(accion2)
         self.addToolBar(barra_herramientas)
 
-        barra_estado = self.statusBar()
-        barra_estado.addPermanentWidget(QLabel(platform.system()))
-        barra_estado.showMessage("Listo. Esperando acción ...", 3000)
-
-        # Creamos un componente flotante
         self.widget_flotante = QDockWidget()
-        # Agregamos título a este componente
+
         self.widget_flotante.setWindowTitle("Componente base 1")
-        # Asignamos el componente que contendrà
+
         self.widget_flotante.setWidget(QTextEdit(""))
-        # Le asignamos una anchura mínima de 50
+
         self.widget_flotante.setMinimumWidth(50)
-        # Lo posicionamos a la derecha de la ventana principal
+
         self.addDockWidget(Qt.RightDockWidgetArea, self.widget_flotante)
 
     def imprimir_por_consola(self):
-        # Imprime en el widget_flotante
-        self.widget_flotante.setWidget(QTextEdit("pulsado"))
 
+        self.widget_flotante.setWidget(QTextEdit("pulsado"))
 
     def entrar_modo_ayuda(self):
         if (QWhatsThis.inWhatsThisMode()):

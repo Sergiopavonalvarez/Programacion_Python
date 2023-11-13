@@ -9,23 +9,21 @@ class App(QMainWindow):
         super().__init__()
         self.setWindowTitle("Editor de texto plano")
 
-        # Define the text editor widget
+
         self.textEdit = QTextEdit()
         self.setCentralWidget(self.textEdit)
 
-        # Define the actions
-        self.openAction = QAction(QIcon("C://Users//pavon//Documents//PyCharm//Programacion_Python//00 Ejercicios//04 Ponte A Prueba 04//abrir.png"), "Abrir", self, shortcut="Ctrl+O")
-        self.saveAction = QAction(QIcon("C://Users//pavon//Documents//PyCharm//Programacion_Python//00 Ejercicios//04 Ponte A Prueba 04//descarga.png"), "Guardar", self, shortcut="Ctrl+S")
+
+        self.openAction = QAction(QIcon("C://Users//pavon//Documents//PyCharm//Programacion_Python//00 Ejercicios//05 Caso Practico 05//abrir.png"), "Abrir", self, shortcut="Ctrl+O")
+        self.saveAction = QAction(QIcon("C://Users//pavon//Documents//PyCharm//Programacion_Python//00 Ejercicios//05 Caso Practico 05//descarga.png"), "Guardar", self, shortcut="Ctrl+S")
         self.cerrarAction = QAction("Cerrar", self, shortcut="Ctrl+W", triggered=self.cerrar)
 
 
-        # Connect the actions to slots
         self.openAction.triggered.connect(self.openFile)
         self.saveAction.triggered.connect(self.saveFile)
         self.cerrarAction.triggered.connect(self.cerrar)
 
 
-        # Add the actions to the menu bar
         menuBar = self.menuBar()
         fileMenu = menuBar.addMenu("&Archivo")
         fileMenu.addAction(self.openAction)
@@ -33,16 +31,10 @@ class App(QMainWindow):
         fileMenu.addAction(self.cerrarAction)
 
 
-        # Add the actions to the toolbar
         toolbar = self.addToolBar("Herramientas")
         toolbar.addAction(self.openAction)
         toolbar.addAction(self.saveAction)
 
-
-
-
-
-        # Show the window
         self.show()
 
     def openFile(self):

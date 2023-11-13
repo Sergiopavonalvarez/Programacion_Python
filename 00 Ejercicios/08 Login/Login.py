@@ -15,6 +15,7 @@ class Login(QMainWindow):
         self.input_b = QLineEdit()
         self.input_a.setPlaceholderText("Usuario")
         self.input_b.setPlaceholderText("Contraseña")
+        
 
         layout.addWidget(QLabel("Usuario:"), 0, 0)
         layout.addWidget(self.input_a, 0, 1)

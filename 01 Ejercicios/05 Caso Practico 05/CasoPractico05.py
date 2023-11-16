@@ -74,6 +74,9 @@ class App(QMainWindow):
         global archivo_abierto
         archivo_abierto = None
         self.textEdit.setPlainText("")
+        QCoreApplication.instance().quit()
+
+        
 
 
 

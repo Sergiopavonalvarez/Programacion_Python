@@ -24,16 +24,7 @@ class App(QMainWindow):
         toolbar.addAction(self.saveAction)
         toolbar.addAction(self.cerrarAction)
         self.show()
-#    def openFile(self):
-#        filename, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Text files (*.txt)")
-#        if filename:
-#            file = QFile(filename)
-#            if file.open(QIODevice.ReadOnly):
-#                text = file.readAll().data()
-#                cursor = QTextCursor()
-#                cursor.setDocument(self.textEdit.document())
-#                cursor.insertText(text)
-#                file.close()
+
 
     def openFile(self):
         filename, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Text files (*.txt)")
@@ -44,16 +35,9 @@ class App(QMainWindow):
                 cursor = QTextCursor()
                 cursor.setDocument(self.textEdit.document())
                 cursor.insertText(text)
-                file.close()            
+                file.close()         
 
-# def abrir_archivo(self):
-#        file_dialog = QFileDialog(self)
-#        file_dialog.setAcceptMode(QFileDialog.AcceptOpen)
-#        if file_dialog.exec() == QFileDialog.Accepted:
-#            file_path = file_dialog.selectedFiles()[0]
-#            with open(file_path, 'r') as file:
-#                content = file.read()
-#                self.text_edit.setPlainText(content)
+
 
 
     def saveFile(self):
@@ -63,10 +47,11 @@ class App(QMainWindow):
             text = self.textEdit.toPlainText()
             file.write(text.encode())
             file.close()
+
     def cerrar(self):
-        global archivo_abierto
-        archivo_abierto = None
-        self.textEdit.setPlainText("")        
+        self.textEdit.clear()
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     editor = App()

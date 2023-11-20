@@ -27,21 +27,23 @@ class App(QMainWindow):
 
 
     def openFile(self):
-        filename, _ = QFileDialog.getOpenFileName(self, "Abrir archivo", "", "Text files (*.txt)")
-        if filename:
-            file = QFile(filename)
-            if file.open(QIODevice.ReadOnly):
-                text = file.readAll().data()
-                cursor = QTextCursor()
-                cursor.setDocument(self.textEdit.document())
-                cursor.insertText(text)
-                file.close()         
+
+     filename = "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
+
+     if filename:
+        file = QFile(filename)
+        if file.open(QIODevice.ReadOnly):
+            text = file.readAll().data().decode('utf-8')  # Read file content as utf-8
+            cursor = QTextCursor(self.textEdit.document())  # Pass the document to QTextCursor constructor
+            cursor.insertText(text)
+            file.close()
+  
 
 
 
 
     def saveFile(self):
-        filename = "archivo_04PonteAPrueba.txt"
+        filename = "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
         file = QFile(filename)
         if file.open(QIODevice.WriteOnly):
             text = self.textEdit.toPlainText()

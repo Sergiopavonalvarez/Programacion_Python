@@ -13,10 +13,13 @@ class App(QMainWindow):
         self.textEdit = QTextEdit()
         self.setCentralWidget(self.textEdit)
 
+        self.openAction = QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/05 Caso Practico 05/abrir.png"),"Abrir", self, shortcut="Ctrl+O")
+        self.saveAction = QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/05 Caso Practico 05/descarga.png"),"Guardar", self, shortcut="Ctrl+S")
+        self.cerrarAction = QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/05 Caso Practico 05/salir.png"),"Cerrar archivo", self, shortcut="Ctrl+W", triggered=self.cerrar)
 
-        self.openAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/05 Caso Practico 05/abrir.png"), "Abrir", self, shortcut="Ctrl+O")
-        self.saveAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/05 Caso Practico 05/descarga.png"), "Guardar", self, shortcut="Ctrl+S")
-        self.cerrarAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/05 Caso Practico 05/salir.png"),"Cerrar archivo", self, shortcut="Ctrl+W", triggered=self.cerrar)
+        #self.openAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/05 Caso Practico 05/abrir.png"), "Abrir", self, shortcut="Ctrl+O")
+        #self.saveAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/05 Caso Practico 05/descarga.png"), "Guardar", self, shortcut="Ctrl+S")
+        #self.cerrarAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/05 Caso Practico 05/salir.png"),"Cerrar archivo", self, shortcut="Ctrl+W", triggered=self.cerrar)
 
 
         self.openAction.triggered.connect(self.openFile)

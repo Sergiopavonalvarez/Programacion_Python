@@ -15,10 +15,8 @@ class VentanaPrincipal(QMainWindow):
 
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono1 = os.path.join(os.path.dirname(__file__),
-                                     "/00 Ejercicios/04 Caso Practico 04//ayuda.png")
-        ruta_a_icono2 = os.path.join(os.path.dirname(__file__),
-                                     "/00 Ejercicios/04 Caso Practico 04//imprimir.png")
+        ruta_a_icono1 = os.path.join(os.path.dirname(__file__),"C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Caso Practico 04/imprimir.png")
+        ruta_a_icono2 = os.path.join(os.path.dirname(__file__),"C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Caso Practico 04/ayuda.png")
         accion = QAction(QIcon(ruta_a_icono2), "Imprimir por consola", self)
         accion2 = QAction(QIcon(ruta_a_icono1), "Que es esto?", self)
 

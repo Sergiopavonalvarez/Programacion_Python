@@ -8,9 +8,18 @@ class App(QMainWindow):
         self.setWindowTitle("Editor de texto plano")
         self.textEdit = QTextEdit()
         self.setCentralWidget(self.textEdit)
-        self.openAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/abrir.png"), "Abrir", self, shortcut="Ctrl+O")
-        self.saveAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/descarga.png"), "Guardar", self, shortcut="Ctrl+S")
-        self.cerrarAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/salir.png"),"Cerrar archivo", self, shortcut="Ctrl+W", triggered=self.cerrar)
+        #self.openAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/abrir.png"), "Abrir", self, shortcut="Ctrl+O")
+        #self.saveAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/descarga.png"), "Guardar", self, shortcut="Ctrl+S")
+        #self.cerrarAction = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/salir.png"),"Cerrar archivo", self, shortcut="Ctrl+W", triggered=self.cerrar)
+
+
+
+
+        self.openAction = QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/abrir.png"),"Abrir", self, shortcut="Ctrl+O")
+        self.saveAction = QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/descarga.png"),"Guardar", self, shortcut="Ctrl+S")
+        self.cerrarAction = QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/salir.png"),"Cerrar archivo", self, shortcut="Ctrl+W", triggered=self.cerrar)
+
+
         self.openAction.triggered.connect(self.openFile)
         self.saveAction.triggered.connect(self.saveFile)
         self.cerrarAction.triggered.connect(self.cerrar)
@@ -28,7 +37,9 @@ class App(QMainWindow):
 
     def openFile(self):
 
-     filename = "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
+     #filename = "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
+
+     filename = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
 
      if filename:
         file = QFile(filename)
@@ -43,7 +54,9 @@ class App(QMainWindow):
 
 
     def saveFile(self):
-        filename = "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
+        #filename = "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
+
+        filename = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Ponte A Prueba 04/archivo_04PonteAPrueba.txt"
         file = QFile(filename)
         if file.open(QIODevice.WriteOnly):
             text = self.textEdit.toPlainText()

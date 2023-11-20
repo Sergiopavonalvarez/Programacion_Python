@@ -7,18 +7,20 @@ class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Ventana princiapl")
-# Barra menu
+        # Barra menu
         barra_menu = self.menuBar()
-# Añadirla al menu princiapl
+
+        # Añadirla al menu princiapl
+
         menu = barra_menu.addMenu("Menu")
-# Definimos el QActiion con el texto
+        # Definimos el QActiion con el texto
         accion = QAction("Imprimir por consola",self)
 
         accion.setShortcut(QKeySequence("ctrl+p"))
-# Conectamos la accion con la renura imprimir 
+        # Conectamos la accion con la renura imprimir
 
         accion.triggered.connect(self.imprimir_consola)
-# Añadir la accion al menu
+        # Añadir la accion al menu
         menu.addAction(accion)
 
     def imprimir_consola(self):

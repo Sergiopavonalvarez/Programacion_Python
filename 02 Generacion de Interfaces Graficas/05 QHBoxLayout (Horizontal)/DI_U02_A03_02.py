@@ -15,11 +15,11 @@ class VentanaPrincipal(QMainWindow):
 
         # Creamos un componente principal para la ventana
         componente_principal = QWidget()
-        # Le assignamos el layout vertical como disposición
+        # Le assignamos el layout horizontal como disposición
         componente_principal.setLayout(layout_horizontal)
         self.setCentralWidget(componente_principal)
 
-        # Añadimos cuatro botones al layout vertical
+        # Añadimos cuatro botones al layout horizontal
         layout_horizontal.addWidget(QPushButton('Uno'))
         layout_horizontal.addWidget(QPushButton('Dos'))
         layout_horizontal.addWidget(QPushButton('Tres'))
@@ -27,8 +27,6 @@ class VentanaPrincipal(QMainWindow):
 
 
 app = QApplication([])
-
 ventana = VentanaPrincipal()
 ventana.show()
-
 app.exec()

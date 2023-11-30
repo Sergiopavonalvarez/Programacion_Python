@@ -13,11 +13,10 @@ class VentanaPrincipal(QMainWindow):
             " y barra de estado")
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono = os.path.join(os.path.dirname(
-            __file__), "images/console.png")
+        ruta_a_icono = os.path.join(os.path.dirname(__file__),"/Users/sergiopavonalvarez/Programacion/PycharmProjects/"+
+        "Programacion_Python/02 Generacion de Interfaces Graficas/11 Barra De Herramientas/imprimir.jpg")
         accion = QAction(QIcon(ruta_a_icono), "Imprimir por consola", self)
-        accion.setWhatsThis(
-            "Al pulsar sobre el botón se imprimirá un texto por consola")
+        accion.setWhatsThis("Al pulsar sobre el botón se imprimirá un texto por consola")
         accion.setStatusTip("Imprimir por consola")
         accion.setShortcut(QKeySequence("Ctrl+p"))
         accion.triggered.connect(self.imprimir_por_consola)

@@ -16,7 +16,8 @@ class VentanaPrincipal(QMainWindow):
 
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono = os.path.join(os.path.dirname( __file__), "C://Users//pavon//Documents//PyCharm//Programacion_Python//22 What’s this//imagen.png")
+        ruta_a_icono = os.path.join(os.path.dirname(__file__), "/Users/sergiopavonalvarez/Programacion/PycharmProjects/"+
+        "Programacion_Python/02 Generacion de Interfaces Graficas/12 What’s this/imagen.png")
         accion = QAction(QIcon(ruta_a_icono), "Imprimir por consola", self)
         
         accion.setWhatsThis("Al pulsar sobre el botón se imprimirá un texto por consola")

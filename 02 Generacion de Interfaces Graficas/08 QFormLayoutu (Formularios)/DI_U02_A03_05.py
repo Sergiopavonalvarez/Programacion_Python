@@ -29,8 +29,6 @@ class VentanaPrincipal(QMainWindow):
         layout_formulario.addRow(QLabel("Decimal: "), QDoubleSpinBox())
 
 app = QApplication([])
-
 ventana = VentanaPrincipal()
 ventana.show()
-
 app.exec()

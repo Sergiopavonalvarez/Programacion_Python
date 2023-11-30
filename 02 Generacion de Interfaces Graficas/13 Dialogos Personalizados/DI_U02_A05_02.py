@@ -45,15 +45,11 @@ class VentanaPrincipal(QMainWindow):
         # 1 si se ejecuta la ranura accept
         # 0 si se ejecuta reject
         resultado = ventana_dialogo.exec()
-        if resultado:
-            print("Aceptada")
-        else:
-            print("Cancelada")
+        if resultado:print("Aceptada")
+        else:print("Cancelada")
 
 
 app = QApplication([])
-
 ventana_principal = VentanaPrincipal()
 ventana_principal.show()
-
 app.exec()

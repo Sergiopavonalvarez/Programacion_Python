@@ -4,9 +4,7 @@ from PySide6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-
         self.setWindowTitle("Aplicación con diálogos")
-
         boton = QPushButton("Haz clic para que el dialogo aparezca")
         boton.clicked.connect(self.mostrar_dialogo)
         self.setCentralWidget(boton)
@@ -21,8 +19,6 @@ class VentanaPrincipal(QMainWindow):
 
 
 app = QApplication([])
-
 ventana_principal = VentanaPrincipal()
 ventana_principal.show()
-
 app.exec()

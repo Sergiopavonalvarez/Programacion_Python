@@ -33,10 +33,7 @@ def cargar_traductor(app):
 
 
 app = QApplication([])
-
 cargar_traductor(app)
-
 ventana_principal = VentanaPrincipal()
 ventana_principal.show()
-
 app.exec()

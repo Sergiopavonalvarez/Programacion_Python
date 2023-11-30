@@ -10,17 +10,13 @@ from PySide6.QtWidgets import (
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(
-            "Ventana principal con menú, barra de herramientas " +
-            " y barra de estado")
+        self.setWindowTitle("Ventana principal con menú, barra de herramientas " +" y barra de estado")
 
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono = os.path.join(os.path.dirname(
-            __file__), "images/console.png")
+        ruta_a_icono = os.path.join(os.path.dirname(__file__), "images/console.png")
         accion = QAction(QIcon(ruta_a_icono), "Imprimir por consola", self)
-        accion.setWhatsThis(
-            "Al pulsar sobre el botón se imprimirá un texto por consola")
+        accion.setWhatsThis("Al pulsar sobre el botón se imprimirá un texto por consola")
         accion.setStatusTip("Imprimir por consola")
         accion.setShortcut(QKeySequence("Ctrl+p"))
         accion.triggered.connect(self.imprimir_por_consola)
@@ -54,8 +50,6 @@ class VentanaPrincipal(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication([])
-
     ventana1 = VentanaPrincipal()
     ventana1.show()
-
     app.exec()

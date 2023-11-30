@@ -8,16 +8,16 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QToolBar
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(
-            "Ventana principal con menú y barra de herramientas")
+        self.setWindowTitle("Ventana principal con menú y barra de herramientas")
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono = os.path.join(os.path.dirname(
-            __file__), "images/console.png")
+
+        #Ruta ordenador sobremesa
+        ruta_a_icono = os.path.join(os.path.dirname(__file__), "/Users/sergiopavonalvarez/Documents/Documentos/"+
+        "PyCharm Project/02 Generacion de Interfaces Graficas/11 Barra De Herramientas/descarga.jpeg")
         # Añadimos a la acción, un icono
         accion = QAction(QIcon(ruta_a_icono), "Imprimir por consola", self)
-        accion.setWhatsThis(
-            "Al pulsar sobre el botón se imprimirá un texto por consola")
+        accion.setWhatsThis("Al pulsar sobre el botón se imprimirá un texto por consola")
         accion.setShortcut(QKeySequence("Ctrl+p"))
         accion.triggered.connect(self.imprimir_por_consola)
         menu.addAction(accion)

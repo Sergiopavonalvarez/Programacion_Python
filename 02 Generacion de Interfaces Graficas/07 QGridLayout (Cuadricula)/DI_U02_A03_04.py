@@ -29,8 +29,6 @@ class VentanaPrincipal(QMainWindow):
 
 
 app = QApplication([])
-
 ventana = VentanaPrincipal()
 ventana.show()
-
 app.exec()

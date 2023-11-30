@@ -8,8 +8,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QHBoxLayout
 )
-
-
 class VentanaPrincipal(QMainWindow):
 
     def __init__(self):

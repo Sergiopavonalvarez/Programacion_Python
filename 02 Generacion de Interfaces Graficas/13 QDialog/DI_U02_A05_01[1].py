@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
+from PySide6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton, QLabel
 
 
 class VentanaPrincipal(QMainWindow):
@@ -14,6 +14,7 @@ class VentanaPrincipal(QMainWindow):
         # Creamos un objeto de la clase dialogo
         ventana_dialogo = QDialog(self)
         ventana_dialogo.setWindowTitle("Ventana de dialogo")
+
         # Lanzamos su bucle de eventos
         ventana_dialogo.exec()
 

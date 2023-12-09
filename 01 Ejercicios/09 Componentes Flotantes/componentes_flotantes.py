@@ -5,52 +5,70 @@ from PySide6.QtGui import QIcon, QAction, QKeySequence, Qt
 from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar, QLabel, QDockWidget, QTextEdit
 
 
+# Define una clase llamada comp_flotantes que hereda de QMainWindow
 class comp_flotantes(QMainWindow):
-    def __init__(Self):
+    # Constructor de la clase
+    def __init__(self):
+        # Llama al constructor de la clase base (QMainWindow)
         super().__init__()
 
+        # Configura la ventana principal
+        self.setWindowTitle("Componente flotante")
 
-        Self.setWindowTitle("Componente flotante")
-        barra_menus=Self.menuBar()
-        menu=barra_menus.addMenu("&Menu")
-        ruta=os.path.join(os.path.dirname(__file__),"C:/Users/pavon/Documents/PyCharm/Python_Dam/Python/00 Ejercicios/09 Componentes Flotantes/imagen.png")
-        accion=QAction(QIcon("C:/Users/pavon/Documents/PyCharm/Python_Dam/Python/00 Ejercicios/09 Componentes Flotantes/imagen.png"),"Imprimir...",Self)
+        # Crea una barra de menús y un menú
+        barra_menus = self.menuBar()
+        menu = barra_menus.addMenu("&Menu")
+
+        # Crea una acción para el menú con un atajo de teclado y conecta la acción a la función imprimir_consola
+        accion = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/09 Componentes Flotantes/imagen.png"), "Imprimir...", self)
         accion.setShortcut(QKeySequence("ctrl+p"))
-        accion.triggered.connect(Self.imprimir_consola)
+        accion.triggered.connect(self.imprimir_consola)
         menu.addAction(accion)
-        barra_herramientas=QToolBar("Barra herramientas1")
+
+        # Crea una barra de herramientas y agrega la acción a la barra de herramientas
+        barra_herramientas = QToolBar("Barra herramientas1")
         barra_herramientas.addAction(accion)
-        Self.addToolBar(barra_herramientas)
-        barra_estado=Self.statusBar()
+        self.addToolBar(barra_herramientas)
+
+        # Crea una barra de estado con una etiqueta permanente y muestra un mensaje temporal
+        barra_estado = self.statusBar()
         barra_estado.addPermanentWidget(QLabel("D.I"))
-        barra_estado.showMessage("Listo...",5000)
+        barra_estado.showMessage("Listo...", 5000)
 
-        # Componente flotante
-        dock1=QDockWidget()
-        # agregamos titulo al componente
+        # Crea un componente flotante (dock)
+        dock1 = QDockWidget()
+
+        # Agrega un título al componente flotante
         dock1.setWindowTitle("Componente base 1")
-        # Asignamos el componente que contendrá
+
+        # Asigna un componente (en este caso, un cuadro de texto vacío) al componente flotante
         dock1.setWidget(QTextEdit(""))
-        # Asignamos anchura minima
+
+        # Asigna un ancho mínimo al componente flotante
         dock1.setMinimumWidth(50)
-        # Ponemos a la derecha
-        Self.addDockWidget(Qt.RightDockWidgetArea,dock1)
 
-        Self.setCentralWidget(QLabel("Comp Principal"))
+        # Coloca el componente flotante a la derecha de la ventana principal
+        self.addDockWidget(Qt.RightDockWidgetArea, dock1)
 
+        # Establece un widget de etiqueta como widget central de la ventana principal
+        self.setCentralWidget(QLabel("Comp Principal"))
+
+    # Función que se llama cuando se activa la acción de imprimir en la consola
     def imprimir_consola(self):
         print("Get Back Jo Jo")
 
-
-
+# Bloque principal de ejecución
 if __name__ == "__main__":
-    # Cada aplicación será una sola instancia de QApplication.
+    # Crea una aplicación Qt
     app = QApplication([])
-    # Creamos un objeto ventana.
+
+    # Crea una instancia de la clase comp_flotantes
     ventana1 = comp_flotantes()
-    # Mostramos la ventana, por defecto los componentes están ocultos.
+
+    # Muestra la ventana
     ventana1.show()
-    # Iniciamos el bucle de eventos.
+
+    # Ejecuta la aplicación
     sys.exit(app.exec())
 
 

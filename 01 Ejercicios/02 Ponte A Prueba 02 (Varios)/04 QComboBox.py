@@ -2,28 +2,50 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QVBoxLayout, QPushButton, QComboBox
 
 
+# Define una clase llamada Porcentaje que hereda de QMainWindow
 class Porcentaje(QMainWindow):
+    # Constructor de la clase
     def __init__(self):
+        # Llama al constructor de la clase base (QMainWindow)
         super().__init__()
+
+        # Configura la ventana principal
         self.setWindowTitle("Ejercicio 04")
         self.setGeometry(1000, 250, 400, 200)
+
+        # Crea un widget central y lo establece como el widget central de la ventana
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
+
+        # Crea un diseño vertical
         layout = QVBoxLayout()
+
+        # Crea un cuadro de combinación para el número de niños y lo llena con una lista de números
         self.combo_ninos = QComboBox()
         lista = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         self.combo_ninos.addItems(lista)
-        layout.addWidget(QLabel("Numero de niños"))
+
+        # Agrega etiquetas y cuadros de combinación al diseño vertical
+        layout.addWidget(QLabel("Número de niños"))
         layout.addWidget(self.combo_ninos)
+
+        # Crea un cuadro de combinación para el número de niñas y lo llena con la misma lista de números
         self.combo_ninas = QComboBox()
         self.combo_ninas.addItems(lista)
-        layout.addWidget(QLabel("Numero de niñas"))
+        layout.addWidget(QLabel("Número de niñas"))
         layout.addWidget(self.combo_ninas)
+
+        # Crea un botón de cálculo y lo agrega al diseño vertical
         self.calcular_boton = QPushButton("Calcular")
         layout.addWidget(self.calcular_boton)
+
+        # Conecta la señal de clic del botón a la función 'calcular_porcentaje'
         self.calcular_boton.clicked.connect(self.calcular_porcentaje)
+
+        # Establece el diseño vertical como el diseño del widget central
         central_widget.setLayout(layout)
 
+    # Función que realiza el cálculo del porcentaje y muestra el resultado en la consola
     def calcular_porcentaje(self):
         ninos = int(self.combo_ninos.currentText())
         ninas = int(self.combo_ninas.currentText())
@@ -31,9 +53,16 @@ class Porcentaje(QMainWindow):
         resultado += f"\nPorcentaje de niñas: {ninas / (ninos + ninas) * 100:.2f}%"
         print(resultado)
 
-
+# Bloque principal de ejecución
 if __name__ == "__main__":
+    # Crea una aplicación Qt
     app = QApplication([])
+
+    # Crea una instancia de la clase Porcentaje
     ventana1 = Porcentaje()
+
+    # Muestra la ventana
     ventana1.show()
+
+    # Ejecuta la aplicación
     sys.exit(app.exec())

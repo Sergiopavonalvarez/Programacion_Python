@@ -20,7 +20,7 @@ class comp_flotantes(QMainWindow):
         menu = barra_menus.addMenu("&Menu")
 
         # Crea una acción para el menú con un atajo de teclado y conecta la acción a la función imprimir_consola
-        accion = QAction(QIcon("C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/09 Componentes Flotantes/imagen.png"), "Imprimir...", self)
+        accion = QAction("Imprimir...", self)
         accion.setShortcut(QKeySequence("ctrl+p"))
         accion.triggered.connect(self.imprimir_consola)
         menu.addAction(accion)
@@ -35,11 +35,12 @@ class comp_flotantes(QMainWindow):
         barra_estado.addPermanentWidget(QLabel("D.I"))
         barra_estado.showMessage("Listo...", 5000)
 
+
         # Crea un componente flotante (dock)
         dock1 = QDockWidget()
 
         # Agrega un título al componente flotante
-        dock1.setWindowTitle("Componente base 1")
+        dock1.setWindowTitle("Componente Flotante")
 
         # Asigna un componente (en este caso, un cuadro de texto vacío) al componente flotante
         dock1.setWidget(QTextEdit(""))

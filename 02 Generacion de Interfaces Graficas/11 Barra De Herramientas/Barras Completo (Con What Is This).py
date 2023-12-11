@@ -5,34 +5,30 @@ from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QMainWindow, QApplication, QToolBar, QLabel
 
 
+
 class completo(QMainWindow):
     def __init__(self):
         super().__init__()
 
         # Barra Menu
-
-        # Creamos la barra de menu
         barra_menu=self.menuBar()
         # Añadimos la opcion menu
         menu=barra_menu.addMenu("&Menu")
         # Creamos la accion
-        accion_hola=QAction("&Imprimir hola", self)
-        accion_adios=QAction("&Imprimir adios", self)
+        accion_hola=QAction("&Imprimir Hola", self)
+        accion_adios=QAction("&Imprimir Adios", self)
         # Conectamos la accion a la ranura
         accion_hola.triggered.connect(self.imprimirhola)
         accion_adios.triggered.connect(self.imprimiradios)
         # Añadimos accion al menu
         menu.addAction(accion_hola)
+        menu.addAction(accion_adios)
 
         # WhatThis
-        accion_hola.setWhatsThis("DDDD")
-        accion_adios.setWhatsThis("HHHH")
-        accion_adios.setStatusTip("Imprime hola")
-        accion_hola.setStatusTip("Imprime adios")
+        accion_adios.setStatusTip("Imprime Adios")
+        accion_hola.setStatusTip("Imprime Hola")
 
         #Barra Herramientas
-
-        # Creamos la barra de herramientas
         barra_herramientas=QToolBar("Barra de herramientas")
         # Añadimos la accion a la barra de herramientas
         barra_herramientas.addAction(accion_hola)
@@ -41,8 +37,6 @@ class completo(QMainWindow):
         self.addToolBar(barra_herramientas)
 
         #Barra de estado
-
-        # Creamos la barra de estado
         barra_estado=self.statusBar()
         # Añadimos la barra de estado
         barra_estado.addPermanentWidget(QLabel(platform.system()))

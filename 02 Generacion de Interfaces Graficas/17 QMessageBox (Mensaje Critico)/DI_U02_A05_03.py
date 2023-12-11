@@ -21,8 +21,7 @@ class VentanaPrincipal(QMainWindow):
             self,
             "Ejemplo de cuadro de mensaje crítico",
             "Ha habído algun problema al realizar la acción",
-            buttons=QMessageBox.Discard | QMessageBox.NoToAll |
-                QMessageBox.Ignore,
+            buttons=QMessageBox.Discard | QMessageBox.NoToAll |QMessageBox.Ignore,
             defaultButton=QMessageBox.Discard
         )
 

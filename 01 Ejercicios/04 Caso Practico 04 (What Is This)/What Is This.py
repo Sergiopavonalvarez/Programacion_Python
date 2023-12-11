@@ -23,8 +23,8 @@ class VentanaPrincipal(QMainWindow):
     
 
         # Define las rutas a los iconos
-        ruta_a_icono1 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Caso Practico 04/ayuda.png")
-        ruta_a_icono2 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/PyCharm/Programacion_Python/01 Ejercicios/04 Caso Practico 04/imprimir.png")
+        ruta_a_icono1 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Caso Practico 04 (What Is This)/ayuda.png")
+        ruta_a_icono2 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/01 Ejercicios/04 Caso Practico 04 (What Is This)/imprimir.png")
 
         # Crea acciones con iconos y texto para el menú
         accion = QAction(QIcon(ruta_a_icono2), "Imprimir por consola", self)
@@ -62,7 +62,7 @@ class VentanaPrincipal(QMainWindow):
 
     # Función que se ejecuta al hacer clic en la acción "Imprimir por consola"
     def imprimir_por_consola(self):
-        self.widget_flotante.setWidget(QTextEdit("pulsado"))
+        self.widget_flotante.setWidget(QTextEdit("Añadido a la cola de impresion"))
 
     # Función que entra o sale del modo de ayuda al hacer clic en la acción "Que es esto?"
     def entrar_modo_ayuda(self):
@@ -76,13 +76,10 @@ class VentanaPrincipal(QMainWindow):
 if __name__ == "__main__":
     # Crea una aplicación Qt
     app = QApplication([])
-
     # Crea una instancia de la clase VentanaPrincipal
     ventana1 = VentanaPrincipal()
-
     # Muestra la ventana principal
     ventana1.show()
-
     # Ejecuta la aplicación
     app.exec()
 

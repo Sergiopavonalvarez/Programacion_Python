@@ -45,10 +45,10 @@ class VentanaPrincipal(QMainWindow):
      print("dos")
 
     def resultadotres(self):
-         print("tres")
+     print("tres")
 
     def resultadocuatro(self):
-        print("cuatro")
+     print("cuatro")
 
 
 app = QApplication([])

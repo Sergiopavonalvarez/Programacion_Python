@@ -82,12 +82,9 @@ class Login(QMainWindow):
 if __name__ == "__main__":
     # Crea una aplicación Qt
     app = QApplication([])
-    
     # Crea una instancia de la clase Login
     ventana1 = Login()
-    
     # Muestra la ventana
     ventana1.show()
-    
     # Ejecuta la aplicación
     sys.exit(app.exec())

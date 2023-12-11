@@ -1,34 +1,44 @@
-from PySide6.QtWidgets import (
-    QApplication,
-    QMainWindow,
-    QWidget,
-    QFormLayout,
-    QLabel,
-    QLineEdit,
-    QSpinBox,
-    QDoubleSpinBox
-)
+from PySide6.QtWidgets import QMainWindow, QFormLayout, QWidget, QApplication, QLabel, QLineEdit, QSpinBox, \
+    QDoubleSpinBox, QPushButton
 
 
-class VentanaPrincipal(QMainWindow):
 
+
+
+class form (QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Layout formulario")
+        layoutform=QFormLayout()
+        comprin=QWidget()
+        comprin.setLayout(layoutform)
+        self.setCentralWidget(comprin)
 
-        # Creamos un objeto layout formulario
-        layout_formulario = QFormLayout()
-        componente_principal = QWidget()
-        componente_principal.setLayout(layout_formulario)
-        self.setCentralWidget(componente_principal)
+        boton=QPushButton("Enviar")
+        self.texto=QLineEdit()
+        self.entero=QSpinBox()
+        self.double=QDoubleSpinBox()
+        boton.clicked.connect(self.accionboton)
 
-        # Cada fila contendrá una etiqueta y un componente de entrda
-        layout_formulario.addRow(QLabel("Texto: "), QLineEdit())
-        layout_formulario.addRow(QLabel("Entero: "), QSpinBox())
-        layout_formulario.addRow(QLabel("Decimal: "), QDoubleSpinBox())
+        layoutform.addRow(QLabel("Texto"),self.texto)
+        layoutform.addRow(QLabel("Entero"), self.entero)
+        layoutform.addRow(QLabel("Decimal"), self.double)
+        layoutform.addRow(boton)
+
+
+
+
+    def accionboton(self):
+        # Obtener el texto del QLineEdit y luego imprimirlo
+        texto1 = self.texto.text()
+        entero1 = self.entero.text()
+        double1 = self.double.text()
+        print(texto1)
+        print(entero1)
+        print(double1)
+
 
 app = QApplication([])
-ventana = VentanaPrincipal()
+ventana = form()
 ventana.show()
 app.exec()

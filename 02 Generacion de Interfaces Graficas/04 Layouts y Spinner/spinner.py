@@ -15,12 +15,12 @@ class spinner(QMainWindow):
         self.boton=QPushButton("boton", self)
         self.boton.move(100, 0)
         self.boton.clicked.connect(self.mostrar)
-
         self.resultado.move(100, 100)
 
-
     def mostrar(self):
-        self.resultado.setText(self.spinner.currentText())
+        indice_seleccionado = self.spinner.currentIndex()
+        numero = self.spinner.itemText(indice_seleccionado)
+        print("El numero elegido es:", numero)
 
 if __name__ == "__main__":
     app = QApplication([])

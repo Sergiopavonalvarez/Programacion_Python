@@ -10,27 +10,34 @@ from PySide6.QtWidgets import (
 class VentanaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle(
-            "Ventana principal con menú, barra de herramientas " +
-            " y barra de estado")
+        self.setWindowTitle("Ventana principal con menú, barra de herramientas  y barra de estado")
+
+        #Barra de menu
 
         barra_menus = self.menuBar()
         menu = barra_menus.addMenu("&Menu")
-        ruta_a_icono = os.path.join(os.path.dirname(__file__), "/Users/sergiopavonalvarez/Programacion/PycharmProjects/"+
-        "Programacion_Python/02 Generacion de Interfaces Graficas/12 What’s this/imagen.png")
-        accion = QAction(QIcon(ruta_a_icono), "Imprimir por consola", self)
-        
+        #ruta_a_icono = os.path.join(os.path.dirname(__file__), "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/02 Generacion de Interfaces Graficas/12 What’s this/imagen.png")
+        accion = QAction("Imprimir", self)
+        accion2=QAction("Modo Ayuda",self)
         accion.setWhatsThis("Al pulsar sobre el botón se imprimirá un texto por consola")
-        accion.setStatusTip("Modo de ayuda")
-
+        accion2.setStatusTip("Modo de ayuda")
         accion.setShortcut(QKeySequence("Ctrl+p"))
+        accion2.setShortcut(QKeySequence("Ctrl+n"))
         accion.triggered.connect(self.imprimir_por_consola)
-        accion.triggered.connect(self.entrar_modo_ayuda)
+        accion2.triggered.connect(self.entrar_modo_ayuda)
         menu.addAction(accion)
+        menu.addAction(accion2)
+
+
+        #Barra de herramientas
 
         barra_herramientas = QToolBar("Barra de herramientas 1")
         barra_herramientas.addAction(accion)
+        barra_herramientas.addAction(accion2)
         self.addToolBar(barra_herramientas)
+
+
+        #Arra de estado
 
         barra_estado = self.statusBar()
         barra_estado.addPermanentWidget(QLabel(platform.system()))
@@ -46,12 +53,10 @@ class VentanaPrincipal(QMainWindow):
         dock1.setMinimumWidth(50)
         # Lo posicionamos a la derecha de la ventana principal
         self.addDockWidget(Qt.RightDockWidgetArea, dock1)
-
         self.setCentralWidget(QLabel("Componente principal"))
 
     def imprimir_por_consola(self):
-        print("Acción lanzada a través del menú, del atajo " +
-              " o de la barra de herramientas")
+        print("Acción lanzada a través del menú, del atajo o de la barra de herramientas")
         
     def entrar_modo_ayuda(self):
         if(QWhatsThis.inWhatsThisMode()):

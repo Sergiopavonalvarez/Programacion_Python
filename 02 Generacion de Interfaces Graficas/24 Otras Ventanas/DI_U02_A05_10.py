@@ -2,14 +2,6 @@ from PySide6.QtWidgets import (
     QApplication, QMainWindow, QPushButton, QLabel, QVBoxLayout, QWidget
     )
 
-# Clase que hereda de QLabel. Si no tiene parent,
-# se mostrará en una ventana flotante
-class OtraVentana(QLabel):
-    def __init__(self):
-        super().__init__()
-        self.setText("La otra ventana")
-
-
 class VentanaPrincipal(QMainWindow):
 
     def __init__(self):
@@ -36,6 +28,12 @@ class VentanaPrincipal(QMainWindow):
                 self.otra_ventana.show()
             else:
                 self.otra_ventana.hide()
+# Clase que hereda de QLabel. Si no tiene parent,
+# se mostrará en una ventana flotante
+class OtraVentana(QLabel):
+    def __init__(self):
+        super().__init__()
+        self.setText("La otra ventana")
 
 
 app = QApplication([])

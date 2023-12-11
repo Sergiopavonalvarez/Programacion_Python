@@ -59,12 +59,9 @@ class Ventana(QMainWindow):
 if __name__ == "__main__":
     # Crea una aplicación Qt
     app = QApplication(sys.argv)
-
     # Crea una instancia de la clase Ventana
     ventana = Ventana()
-
     # Muestra la ventana
     ventana.show()
-
     # Ejecuta la aplicación
     sys.exit(app.exec())

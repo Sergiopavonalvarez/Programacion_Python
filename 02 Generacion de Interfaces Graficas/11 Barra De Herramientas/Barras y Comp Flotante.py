@@ -9,16 +9,19 @@ class compflotante(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        #Barra de menu
         barra_menu=self.menuBar()
         barra_menu.addMenu("&Menu")
         imprimir=QAction("&Imprimir",self)
         imprimir.triggered.connect(self.imprimir_hola)
         barra_menu.addAction(imprimir)
 
+        #Barra de herramientas
         barra_herramientas=QToolBar("Barra herramientas")
         barra_herramientas.addAction(imprimir)
         self.addToolBar(barra_herramientas)
 
+        #Barra de estado
         barra_estado=self.statusBar()
         barra_estado.addPermanentWidget(QLabel("Barra de estado"))
         barra_estado.showMessage("Cargando...",3000)
@@ -26,7 +29,6 @@ class compflotante(QMainWindow):
 
 
         # Componente flotante
-
         # Lo creamos
         cFlotante=QDockWidget()
         # Agregamos titulo

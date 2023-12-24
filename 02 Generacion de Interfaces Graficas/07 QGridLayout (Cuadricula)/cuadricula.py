@@ -7,6 +7,7 @@ class VentanaPrincipal(QMainWindow):
 
         cuadricula=QGridLayout()
         comprincipal=QWidget()
+        
         comprincipal.setLayout(cuadricula)
         self.setCentralWidget(comprincipal)
 

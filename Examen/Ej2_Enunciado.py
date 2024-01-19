@@ -11,7 +11,6 @@ class PorcentajeNinosNinasApp(QMainWindow):
         ruta_a_icono1 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen/lupa.png")
         ruta_a_icono2 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen/cubo-azul.png")
         ruta_a_icono3 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen/cubo-rojo.png")
-
         barra_menu=self.menuBar()
         menu1=barra_menu.addMenu("&Archivo")
         menu2=barra_menu.addMenu("&Editar")

@@ -8,7 +8,7 @@ import DI_U04_A03_03
 class EditorContrasena(QLineEdit):
     def _init_(self,parent=None):
         super()._init_(parent)
-        self.mostrar = QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/04 Componentes de Usuario/QLineEdit/593374.png")
+        self.mostrar = QIcon("/04 Componentes de Usuario/Ocultar cosas/593374.png")
         self.ocultar = QIcon("C:/Users/pavon/Documents/PyCharm/Programacion_Python/04 Componentes de Usuario/QLineEdit/images.png")
 
         self.laber=self.setEchoMode(QLineEdit.Password)

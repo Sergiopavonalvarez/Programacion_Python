@@ -1,0 +1,29 @@
+
+import datapane as dp
+import pandas as pd
+import matplotlib.pyplot as plt
+
+fichero_csv = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/DI_U05_A02_02.csv"
+df = pd.read_csv(fichero_csv)
+
+#Grafico Lineas
+ventas_mes = df.groupby(['Mes'], sort=False).sum()
+grafico_matplot_lineas = ventas_mes.plot(y='Unidades')
+grafico_datapane_lineas = dp.Plot(grafico_matplot_lineas, responsive=False)
+
+
+#Grafico barras
+ventas_vendedor = df.groupby(['Nombre']).sum()
+grafico_matplot_barras = ventas_vendedor.plot.bar(y='Importe (€)')
+plt.tight_layout()
+grafico_datapane_barras = dp.Plot(grafico_matplot_barras, responsive=False)
+
+#Grafico tarta
+grafico_matplotlib_sectores = ventas_vendedor.plot.pie(y='Unidades', legend=False, ylabel="")
+grafico_datapane_sectores = dp.Plot(grafico_matplotlib_sectores, responsive=False)
+
+
+
+# Creamos un informe con los graficos:
+report = dp.Report(grafico_datapane_lineas, grafico_datapane_barras, grafico_datapane_sectores)
+report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras.html", open=True)

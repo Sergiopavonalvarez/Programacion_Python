@@ -7,7 +7,7 @@ for i in range(4):
 print(lista_numeros)
 def histograma (lista_numeros):
 
-        print("*"*lista_numeros[0])
+        print("*" * lista_numeros[0])
         print("*" * lista_numeros[1])
         print("*" * lista_numeros[2])
         print("*" * lista_numeros[3])

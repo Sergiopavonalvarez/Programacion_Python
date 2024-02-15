@@ -2,22 +2,28 @@ import os
 import pandas as pd
 import datapane as dp
 
-fichero_csv="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/"
-os.chdir(fichero_csv)
-fichero_csvv="DI_U05_A02_PP_E_01.csv"
-df=pd.read_csv(fichero_csvv) #Cargamos el archivo CSV en un DataFrame
+fichero_csv="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/DI_U05_A02_PP_E_01.csv"
+ruta_imagen_local="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/DI_U05_A02_PP_E_02.png"
+titulo = dp.HTML("<h1 style='text-align:center; color:#4CAF50;'>Informe: Análisis de Ventas 2021</h1>")
 
-datos_diciembre=df[df['Mes']=='Diciembre'] #Filtramos los datos del mes diciembre
-unidades_diciembre=datos_diciembre['Unidades'].sum()#Sumar las unidades vendidas en el mes de diciembre.
+df=pd.read_csv(fichero_csv)
+dp.Media(ruta_imagen_local)
 
-datos_noviembre=df[df['Mes']=='Noviembre']#Filtramos los datos del mes noviembre
-unidades_noviembre=datos_noviembre['Unidades'].sum()#Sumar las unidades vendidas en el mes de noviembre
+año_2021=df[df['Año']==2021]
+ventas_2021=año_2021['Ventas'].sum()
+año_2020=df[df['Año']==2020]
+ventas_2020=año_2020['Ventas'].sum()
 
-unidades_fin_año=dp.BigNumber(heading='Unidades totales en diciembre',
-                              value=unidades_diciembre,
-                              change=unidades_diciembre-unidades_noviembre,
-                              is_upward_change=unidades_diciembre>unidades_noviembre)
+data_table_config = dp.DataTable(df)
 
-report=dp.Report(unidades_fin_año)#Mostrar el resultado en el navegador
 
-report.save(path='Ponte a Prueba.html', open=True)#Guardar resultado en ese archivo
+unidades_fin_año=dp.BigNumber(heading='Ventas totales en 2021',
+                              value=ventas_2021,
+                              change=ventas_2021 - ventas_2020,
+                              is_upward_change=ventas_2020 < ventas_2021
+                              )
+
+fichero=dp.Attachment(file='C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/DI_U05_A02_PP_E_01.csv', filename='Ficher.csv')
+texto=dp.Text('**Puedes descargar el fichero con los datos del informe.**')
+report=dp.Report( titulo,dp.Media(ruta_imagen_local),unidades_fin_año, data_table_config, fichero)
+report.save(path='Ponte a Prueba.html', open=True)

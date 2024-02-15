@@ -25,5 +25,32 @@ grafico_datapane_sectores = dp.Plot(grafico_matplotlib_sectores, responsive=Fals
 
 
 # Creamos un informe con los graficos:
-report = dp.Report(grafico_datapane_lineas, grafico_datapane_barras, grafico_datapane_sectores)
-report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras.html", open=True)
+#report = dp.Report(grafico_datapane_lineas, grafico_datapane_barras, grafico_datapane_sectores)
+
+
+#Agrupados en dos columnas:
+#report=dp.Report(
+#    dp.Group(grafico_datapane_lineas, grafico_datapane_barras, grafico_datapane_sectores, columns=2)
+#)
+
+
+#Agrupados por paginas:
+report = dp.Report(
+    dp.Page(
+        title='Grafico de lineas',
+        blocks=[grafico_datapane_lineas]
+    ),
+    dp.Page(
+        title='Grafico de Barras',
+        blocks=[grafico_datapane_barras]
+        ),
+    dp.Page(
+        title='Grafico de Sectores',
+        blocks=[grafico_datapane_sectores]
+)
+)
+
+
+#report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras(Sinagrupar en columnas).html", open=True)
+report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras(Agrupados en columnas).html", open=True)
+

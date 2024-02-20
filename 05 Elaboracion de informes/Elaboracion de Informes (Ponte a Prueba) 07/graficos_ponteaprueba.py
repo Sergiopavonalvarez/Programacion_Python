@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Ruta al archivo CSV
-fichero_csv = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 07/DI_U05_A02_PP_E_01.csv"
-
+#fichero_csv = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 07/DI_U05_A02_PP_E_01.csv"
+fichero_csv ="C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 07/DI_U05_A02_PP_E_01.csv"
 # Cargar el DataFrame desde el archivo CSV
 df = pd.read_csv(fichero_csv)
 

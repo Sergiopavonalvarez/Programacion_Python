@@ -33,10 +33,6 @@ report=dp.Report(
     dp.Group(grafico_datapane_lineas, grafico_datapane_barras, grafico_datapane_sectores, columns=2)
 )
 
-
-
-
-
 #report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras(Sinagrupar en columnas).html", open=True)
 report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 07/Informe(Ponte a Prueba).html", open=True)
 

@@ -2,8 +2,8 @@ import os
 import pandas as pd
 import datapane as dp
 
-fichero_csv="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/DI_U05_A02_PP_E_01.csv"
-ruta_imagen_local="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/DI_U05_A02_PP_E_02.png"
+fichero_csv="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/06 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv"
+ruta_imagen_local="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/06 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_02.png"
 titulo = dp.HTML("<h1 style='text-align:center; color:#4CAF50;'>Informe: Análisis de Ventas 2021</h1>")
 
 df=pd.read_csv(fichero_csv)
@@ -23,7 +23,7 @@ unidades_fin_año=dp.BigNumber(heading='Ventas totales en 2021',
                               is_upward_change=ventas_2020 < ventas_2021
                               )
 
-fichero=dp.Attachment(file='C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Ponte a Prueba) 06/DI_U05_A02_PP_E_01.csv', filename='Ficher.csv')
+fichero=dp.Attachment(file='/05 Elaboracion de informes/06 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv', filename='Ficher.csv')
 texto=dp.Text('**Puedes descargar el fichero con los datos del informe.**')
 report=dp.Report( titulo,dp.Media(ruta_imagen_local),unidades_fin_año, data_table_config, fichero)
 report.save(path='Ponte a Prueba.html', open=True)

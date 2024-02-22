@@ -3,7 +3,7 @@ import datapane as dp
 import pandas as pd
 import matplotlib.pyplot as plt
 
-fichero_csv = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/DI_U05_A02_02.csv"
+fichero_csv = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/DI_U05_A02_02.csv"
 df = pd.read_csv(fichero_csv)
 
 #Grafico Lineas
@@ -51,6 +51,6 @@ report = dp.Report(
 )
 
 
-#report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras(Sinagrupar en columnas).html", open=True)
-report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/Elaboracion de Informes (Gráficos) 05/Informe_barras(Agrupados en columnas).html", open=True)
+#report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Sinagrupar en columnas).html", open=True)
+report.save(path="/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Agrupados en columnas).html", open=True)
 

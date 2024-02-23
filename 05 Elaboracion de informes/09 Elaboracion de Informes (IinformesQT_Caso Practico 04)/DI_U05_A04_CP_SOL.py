@@ -10,23 +10,31 @@ class VentanaInformes(QWidget):
         self.layout_vertical = QVBoxLayout()
         self.setLayout(self.layout_vertical)
 
-        boton1 = QPushButton('DI_U05_A02_03.html')
-        boton1.clicked.connect(self.abrir_informe)
-        self.layout_vertical.addWidget(boton1)
+        boton_abrir01 = QPushButton('Abrir informe 01')
+        boton_abrir01.clicked.connect(self.abrir_informe_01)
+        self.layout_vertical.addWidget(boton_abrir01)
 
-        boton2 = QPushButton('DI_U05_A02_08.html')
-        boton2.clicked.connect(self.abrir_informe)
-        self.layout_vertical.addWidget(boton2)
+        boton_abrir02 = QPushButton('Abrir informe 02')
+        boton_abrir02.clicked.connect(self.abrir_informe_02)
+        self.layout_vertical.addWidget(boton_abrir02)
 
-        boton3 = QPushButton('DI_U05_A03_11.html')
-        boton3.clicked.connect(self.abrir_informe)
-        self.layout_vertical.addWidget(boton3)
-        
-    def abrir_informe(self):
-        boton = self.sender()        
-        ruta_absoluta = QDir().absoluteFilePath('./' + boton.text())        
+        boton_abrir03 = QPushButton('Abrir informe 03')
+        boton_abrir03.clicked.connect(self.abrir_informe_03)
+        self.layout_vertical.addWidget(boton_abrir03)
+
+        # No es necesario llamar a abrir_layout() aquí, ya que queremos abrir informes solo al hacer clic en los botones.
+
+    def abrir_informe_01(self):
+        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe01.html"
         QDesktopServices.openUrl(QUrl.fromLocalFile(ruta_absoluta))
-        
+
+    def abrir_informe_02(self):
+        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe02.html"
+        QDesktopServices.openUrl(QUrl.fromLocalFile(ruta_absoluta))
+
+    def abrir_informe_03(self):
+        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe03.html"
+        QDesktopServices.openUrl(QUrl.fromLocalFile(ruta_absoluta))
 
 if __name__ == "__main__":
     app = QApplication([])

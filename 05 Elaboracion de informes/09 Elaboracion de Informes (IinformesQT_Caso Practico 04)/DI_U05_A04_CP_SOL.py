@@ -22,18 +22,21 @@ class VentanaInformes(QWidget):
         boton_abrir03.clicked.connect(self.abrir_informe_03)
         self.layout_vertical.addWidget(boton_abrir03)
 
-        # No es necesario llamar a abrir_layout() aquí, ya que queremos abrir informes solo al hacer clic en los botones.
+
 
     def abrir_informe_01(self):
-        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe01.html"
+        #ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe01.html"
+        ruta_absoluta = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/09 Elaboracion de Informes (IinformesQT_Caso Practico 04)/Informe01.html"
         QDesktopServices.openUrl(QUrl.fromLocalFile(ruta_absoluta))
 
     def abrir_informe_02(self):
-        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe02.html"
+        #ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe02.html"
+        ruta_absoluta = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/09 Elaboracion de Informes (IinformesQT_Caso Practico 04)/Informe02.html"
         QDesktopServices.openUrl(QUrl.fromLocalFile(ruta_absoluta))
 
     def abrir_informe_03(self):
-        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe03.html"
+        #ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe03.html"
+        ruta_absoluta = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/09 Elaboracion de Informes (IinformesQT_Caso Practico 04)/Informe03.html"
         QDesktopServices.openUrl(QUrl.fromLocalFile(ruta_absoluta))
 
 if __name__ == "__main__":

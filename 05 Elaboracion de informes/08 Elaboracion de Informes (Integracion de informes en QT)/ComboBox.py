@@ -33,15 +33,18 @@ class VentanaInformes(QWidget):
         self.view.setHtml(open(ruta_absoluta).read())
 
     def abrir_informe01(self):
-        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe01.html"
+        #ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe01.html"
+        ruta_absoluta = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe01.html"
         self.cargar_informe(ruta_absoluta)
 
     def abrir_informe02(self):
-        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe02.html"
+        #ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe02.html"
+        ruta_absoluta = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe02.html"
         self.cargar_informe(ruta_absoluta)
 
     def abrir_informe03(self):
-        ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe03.html"
+        #ruta_absoluta = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe03.html"
+        ruta_absoluta = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/08 Elaboracion de Informes (Integracion de informes en QT)/Informe03.html"
         self.cargar_informe(ruta_absoluta)
 
 if __name__ == "__main__":

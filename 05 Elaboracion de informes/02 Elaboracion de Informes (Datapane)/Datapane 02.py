@@ -2,7 +2,8 @@ import os
 import pandas as pd
 import datapane as dp
 
-fichero_csv="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/02 Elaboracion de Informes (Datapane)/"
+#fichero_csv="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/02 Elaboracion de Informes (Datapane)/"
+fichero_csv="/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/02 Elaboracion de Informes (Datapane)"
 os.chdir(fichero_csv)
 fichero_csvv="DI_U05_A02_02.csv"
 df=pd.read_csv(fichero_csvv) #Cargamos el archivo CSV en un DataFrame

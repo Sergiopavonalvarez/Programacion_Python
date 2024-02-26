@@ -15,7 +15,7 @@ class Componente:
 
 componente = Componente(10)
 print(componente.atributo)
-componente.atributo = -1
+componente.atributo = 1
 print(componente.atributo)
 componente.atributo = 20
 print(componente.atributo)

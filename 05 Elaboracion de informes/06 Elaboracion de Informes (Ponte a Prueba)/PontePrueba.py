@@ -23,7 +23,7 @@ unidades_fin_año=dp.BigNumber(heading='Ventas totales en 2021',
                               is_upward_change=ventas_2020 < ventas_2021
                               )
 
-fichero=dp.Attachment(file='/05 Elaboracion de informes/06 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv', filename='Ficher.csv')
+fichero=dp.Attachment(file='C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/06 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv', filename='Ficher.csv')
 texto=dp.Text('**Puedes descargar el fichero con los datos del informe.**')
 report=dp.Report( titulo,dp.Media(ruta_imagen_local),unidades_fin_año, data_table_config, fichero)
 report.save(path='Ponte a Prueba.html', open=True)

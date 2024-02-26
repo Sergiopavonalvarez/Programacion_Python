@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Ruta al archivo CSV
-fichero_csv = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/07 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv"
-#fichero_csv = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/07 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv"
+#fichero_csv = "/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/07 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv"
+fichero_csv = "C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/07 Elaboracion de Informes (Ponte a Prueba)/DI_U05_A02_PP_E_01.csv"
 
 
 # Cargar el DataFrame desde el archivo CSV
@@ -38,6 +38,6 @@ report=dp.Report(
     dp.Group(grafico_datapane_lineas, grafico_datapane_barras, grafico_datapane_sectores, columns=2)
 )
 
-#report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Sinagrupar en columnas).html", open=True)
-report.save(path="/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/07 Elaboracion de Informes (Ponte a Prueba)/Informe(Ponte a Prueba).html", open=True)
+report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Sinagrupar en columnas).html", open=True)
+#report.save(path="/Users/sergiopavonalvarez/Programacion/PycharmProjects/Programacion_Python/05 Elaboracion de informes/07 Elaboracion de Informes (Ponte a Prueba)/Informe(Ponte a Prueba).html", open=True)
 

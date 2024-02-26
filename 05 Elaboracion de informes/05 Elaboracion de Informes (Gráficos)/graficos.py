@@ -51,6 +51,6 @@ report = dp.Report(
 )
 
 
-#report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Sinagrupar en columnas).html", open=True)
-report.save(path="/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Agrupados en columnas).html", open=True)
+report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Sinagrupar en columnas).html", open=True)
+#report.save(path="/05 Elaboracion de informes/05 Elaboracion de Informes (Gráficos)/Informe_barras(Agrupados en columnas).html", open=True)
 

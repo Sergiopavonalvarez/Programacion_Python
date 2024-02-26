@@ -161,7 +161,7 @@ class OperacionesArray:
         else:
             return -1
 
-# Ejemplo de uso
+
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print("a) Imprimir Ascendente:")
 OperacionesArray.imprimir_ascendente(arr)

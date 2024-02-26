@@ -1,10 +1,4 @@
-'''
-Escribir un método de clase recursivo que, datos dos String s1 y s2 y sin hacer uso de los métodos definidos en la clase String que resuelven el mismo problema, determine:
-a) si s2 es prefijo de s1.
-b) si s2 es sufijo de s1.
-c) si s2 es una subcadena de s1.
-'''
-#
+
 
 class OperacionesString:
     @classmethod
@@ -46,7 +40,7 @@ class OperacionesString:
             else:
                 return cls.es_subcadena(s1, s2, idx + 1)
 
-# Ejemplo de uso
+
 print(OperacionesString.es_prefijo("hola", "hol"))
 print(OperacionesString.es_sufijo("hola", "la"))
 print(OperacionesString.es_subcadena("hola", "ol"))

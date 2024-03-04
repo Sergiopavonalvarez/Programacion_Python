@@ -7,7 +7,7 @@ class VentanaPrincipal(QWidget):
         super().__init__()
         self.setWindowTitle("Ejemplo slot predefinido")  # Corregir el nombre del método
         self.setFixedSize(200, 30)  # Corregir el tamaño de la ventana
-        self.mostrar = QIcon("/04 Componentes de Usuario/Ocultar cosas/593374.png")
+        self.mostrar = QIcon("/04 Componentes de Usuario/QLineEdit/593374.png")
         self.line_edit1 = QLineEdit(self)
 
         # Fijamos el tamaño del line edit

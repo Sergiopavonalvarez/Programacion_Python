@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>nover.png</file>
+        <file>ver.jpeg</file>
+    </qresource>
+</RCC>

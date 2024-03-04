@@ -16,7 +16,7 @@ if __name__ == "__main__":
     app = QApplication([])
     
     # Asignamos un icono a la ventana
-    app.setWindowIcon(QIcon(":/recursos/cronometro.png"))
+    app.setWindowIcon(QIcon(":/icons/cronometro.png"))
     
     # Creamos un componente cronómetro
     cronometro = CronometroUI()

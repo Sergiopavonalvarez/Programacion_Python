@@ -31,7 +31,11 @@ unidades_fin_año2=dp.BigNumber(heading='Unidades totales en Febrero',
                               is_upward_change=unidades_enero>unidades_febrero)
 
 
-report=dp.Report(unidades_fin_año, unidades_fin_año2)#Mostrar el resultado en el navegador
+#report=dp.Report(unidades_fin_año, unidades_fin_año2)#Mostrar el resultado en el navegador
+
+report=dp.Report(
+    dp.Group(unidades_fin_año, unidades_fin_año2, columns=2)
+)
 
 report.save(path='Informe 02.html', open=True)#Guardar resultado en ese archivo
 

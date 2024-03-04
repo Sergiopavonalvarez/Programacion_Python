@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QFormLayout, QWidget, QLineEdit, QPushButton
 from componente.contraseña import EditorContraseña
+import recursos
 
 class VentanaLogin(QWidget):
     def __init__(self, parent=None):

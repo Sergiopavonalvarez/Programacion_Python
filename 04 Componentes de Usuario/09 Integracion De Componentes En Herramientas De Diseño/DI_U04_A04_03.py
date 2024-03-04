@@ -4,7 +4,7 @@ import DI_U04_A04_06
 from PySide6.QtDesigner import QPyDesignerCustomWidgetCollection
 
 
-TOOLTIP = "01 Cronómetro"
+TOOLTIP = "Cronómetro"
 DOM_XML = """
 <ui language='c++'>
     <widget class='CronometroUI' name='cronometroUI'>

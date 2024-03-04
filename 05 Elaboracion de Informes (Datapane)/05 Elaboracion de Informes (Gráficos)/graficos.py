@@ -8,7 +8,7 @@ df = pd.read_csv(fichero_csv)
 
 #Grafico Lineas
 ventas_mes = df.groupby(['Mes'], sort=False).sum()
-grafico_matplot_lineas = ventas_mes.plot(y='Unidades')
+grafico_matplot_lineas = ventas_mes.plot( y='Unidades')
 grafico_datapane_lineas = dp.Plot(grafico_matplot_lineas, responsive=False)
 
 

@@ -1,4 +1,6 @@
-from PySide6.QtWidgets import QLineEdit
+import sys
+
+from PySide6.QtWidgets import QLineEdit, QApplication
 from PySide6.QtGui import QIcon, QKeySequence
 
 import DI_U04_A02_CP_03
@@ -30,3 +32,5 @@ class EditorContraseña(QLineEdit):
             self.setEchoMode(QLineEdit.Password)
             self.contraseña_visible = False
             self.accion_cambiar_visibilidad.setIcon(self.mostrar)
+
+

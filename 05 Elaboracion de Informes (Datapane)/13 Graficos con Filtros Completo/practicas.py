@@ -2,10 +2,10 @@ import datapane as dp
 import pandas as pd
 import matplotlib.pyplot as plt
 
-fichero_csv = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)//DI_U05_A02_PP_E_01.csv")
+fichero_csv = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)/DI_U05_A02_PP_E_01.csv")
 df = pd.read_csv(fichero_csv)
 
-image_path = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)//DI_U05_A02_PP_E_02.png")  # Ruta de la imagen
+image_path = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)/DI_U05_A02_PP_E_02.png")  # Ruta de la imagen
 
 
 title = dp.HTML('<p style="font-size: 50px; text-align: center; color: black;">Examen</p>')
@@ -65,10 +65,10 @@ gruposGraficos = dp.Group(grafico_datapane_lineas, grafico_datapane_barras, graf
                           grafico_datapane_barras_tipo, columns=2)
 
 #################Descaragar Fichero####################
-fichero = dp.Attachment(file='C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)//DI_U05_A02_PP_E_01.csv',
+fichero = dp.Attachment(file='C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)/DI_U05_A02_PP_E_01.csv',
                         filename='Fichero CSV')
 
 report = dp.Report(title, image, ventas_2021_big_number, ventas_norte_2021_big_number, ventas_sur_2020_big_number,
                    gruposGraficos, fichero)
 
-report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)//informe.html", open=True)
+report.save(path="C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/11 Elaboracion de Informes (Completo 02)/informe.html", open=True)

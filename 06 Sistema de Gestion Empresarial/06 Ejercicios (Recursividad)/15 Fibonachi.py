@@ -11,3 +11,5 @@ n = 10  # Puedes cambiar este valor según la cantidad que desees
 # Llamamos a la función fibonacci() y mostramos el resultado
 fibonacci_sequence = fibonacci(n)
 print("Los primeros", n, "números de Fibonacci son:", fibonacci_sequence)
+
+

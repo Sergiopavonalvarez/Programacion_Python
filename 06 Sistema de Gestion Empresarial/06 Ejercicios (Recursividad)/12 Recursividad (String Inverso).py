@@ -20,4 +20,4 @@ class OperacionesString:
 
 
 print(OperacionesString.orden_inverso("hola"))
-print(OperacionesString.orden_inverso_string("hola"))
+print(OperacionesString.orden_inverso_string("caca"))

@@ -7,4 +7,4 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-print(factorial(n))
+print("Factorial del numero",factorial(n))

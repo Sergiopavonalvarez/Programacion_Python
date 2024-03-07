@@ -39,4 +39,4 @@ report=dp.Report(
 
 
 
-report.save(path="/Examen 2º Evaluacion/Ejercicio02.html", open=True)
+report.save(path="/Examen 2º Evaluacion Desarrollo de Interfaces/Ejercicio02.html", open=True)

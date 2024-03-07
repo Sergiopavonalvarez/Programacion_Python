@@ -8,9 +8,9 @@ class PorcentajeNinosNinasApp(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        ruta_a_icono1 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen 1º Evaluacion/lupa.png")
-        ruta_a_icono2 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen 1º Evaluacion/cubo-azul.png")
-        ruta_a_icono3 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen 1º Evaluacion/cubo-rojo.png")
+        ruta_a_icono1 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen 1º Evaluacion Desarrollo de Interfaces/lupa.png")
+        ruta_a_icono2 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen 1º Evaluacion Desarrollo de Interfaces/cubo-azul.png")
+        ruta_a_icono3 = os.path.join(os.path.dirname(__file__), "C:/Users/pavon/Documents/VS Code/Python/Programacion_Python/Examen 1º Evaluacion Desarrollo de Interfaces/cubo-rojo.png")
         barra_menu=self.menuBar()
         menu1=barra_menu.addMenu("&Archivo")
         menu2=barra_menu.addMenu("&Editar")

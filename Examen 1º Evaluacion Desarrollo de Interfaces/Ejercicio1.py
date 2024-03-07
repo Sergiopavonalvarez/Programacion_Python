@@ -25,7 +25,7 @@ class Ventana(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Tarea Examen 1º Evaluacion")
+        self.setWindowTitle("Tarea Examen 1º Evaluacion Desarrollo de Interfaces")
         self.etiqueta_db2 = QLabel("0 %")
         self.dial = QDial()
         self.dial.setMinimum(0)

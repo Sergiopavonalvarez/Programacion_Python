@@ -55,7 +55,7 @@ table = dp.Table(df)
 data_table = dp.DataTable(df)
 
 
-descargarfichero = dp.Attachment(file='/Examen 2º Evaluacion/DatosOrigen.csv', filename='Datos ventas.csv')
+descargarfichero = dp.Attachment(file='/Examen 2º Evaluacion Desarrollo de Interfaces/DatosOrigen.csv', filename='Datos ventas.csv')
 texto = dp.Text('**Puedes descargar el fichero con los datos del informe:**')
 
 report2=dp.Report(
@@ -63,4 +63,4 @@ report2=dp.Report(
 )
 
 report = dp.Report( imagen,titulo,ventas_2021_big_number,report2, data_table,texto,descargarfichero)
-report.save(path="/Examen 2º Evaluacion/Ejercicio01.html", open=True)
+report.save(path="/Examen 2º Evaluacion Desarrollo de Interfaces/Ejercicio01.html", open=True)

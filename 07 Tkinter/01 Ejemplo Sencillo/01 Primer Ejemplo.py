@@ -1,4 +1,5 @@
 from tkinter import*
+
 #Creamos la raiz
 raiz=Tk()
 #Le damos titulo

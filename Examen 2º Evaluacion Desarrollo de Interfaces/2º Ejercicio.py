@@ -2,7 +2,7 @@ import datapane as dp
 import pandas as pd
 import matplotlib.pyplot as plt
 
-fichero_csv = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/1/DatosOrigen.csv")
+fichero_csv = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/Examen 2º Evaluacion Desarrollo de Interfaces/DatosOrigen.csv")
 df = pd.read_csv(fichero_csv)
 
 

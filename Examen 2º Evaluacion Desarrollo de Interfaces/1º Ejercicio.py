@@ -2,10 +2,10 @@ import datapane as dp
 import pandas as pd
 import matplotlib.pyplot as plt
 
-fichero_csv = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/1/DatosOrigen.csv")
+fichero_csv = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/Examen 2º Evaluacion Desarrollo de Interfaces/DatosOrigen.csv")
 df = pd.read_csv(fichero_csv)
 
-image_path = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/05 Elaboracion de informes (Datapane)/1/Logo.png")  # Ruta de la imagen
+image_path = ("C:/Users/pavon/Documents/PyCharm/Programacion_Python/Examen 2º Evaluacion Desarrollo de Interfaces/Logo.png")  # Ruta de la imagen
 
 titulo = dp.HTML('<p style="font-size: 70px; text-align: Left; color: blue;">Examen</p>')
 imagen = dp.Media(image_path)
